@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>زیرنویس‌یار</title>
+<meta name="theme-color" content="#0B7A75">
+<meta name="description" content="ساخت زیرنویس و ترجمه‌ی آلمانی یا فارسی از روی ویدیو و صدا">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&family=Lalezar&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: one narrow column for a phone. Header, settings panel (key), file picker + options, progress, result. */
+:root{
+  color-scheme:light;
+  --bg:#EEF3F3; --surface:#FFFFFF; --surface-2:#E3ECEB; --ink:#10201F; --muted:#546968; --line:#CCDAD9;
+  --accent:#0B7A75; --accent-ink:#FFFFFF; --accent-soft:#D3EEEB;
+  --warn:#8A5A00; --warn-soft:#FBEBC8; --danger:#B3261E; --on-danger:#FFFFFF;
+  --f-display:'Lalezar','Vazirmatn',system-ui,sans-serif;
+  --f-body:'Vazirmatn',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --bg:#0E1717; --surface:#152221; --surface-2:#1C2D2C; --ink:#E5F0EF; --muted:#90A8A6; --line:#2A3F3E;
+    --accent:#43C6BB; --accent-ink:#06201E; --accent-soft:#173836;
+    --warn:#E8B44A; --warn-soft:#3A2F14; --danger:#F2867F; --on-danger:#2A0A08;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.7;
+  direction:rtl; margin:0; min-height:100vh;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-top:calc(20px + env(safe-area-inset-top, 0px));
+  padding-bottom:calc(56px + env(safe-area-inset-bottom, 0px));
+}
+.wrap{max-width:640px; margin-inline:auto; display:grid; gap:16px; min-width:0}
+.head{display:flex; align-items:flex-start; justify-content:space-between; gap:12px}
+h1{font-family:var(--f-display); font-weight:400; font-size:2.3rem; line-height:1.2; margin:0; text-wrap:balance}
+h2{font-family:var(--f-display); font-weight:400; font-size:1.35rem; line-height:1.3; margin:0}
+.sub{margin:2px 0 0; color:var(--muted); font-size:.95rem}
+
+.btn{
+  min-height:44px; padding:0 16px; border-radius:10px; border:1px solid var(--line); background:var(--surface);
+  color:var(--ink); font:inherit; font-weight:500; cursor:pointer; display:inline-flex; align-items:center;
+  justify-content:center; gap:6px; text-decoration:none; text-align:center;
+}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent); color:var(--accent-ink); border-color:var(--accent)}
+.btn.small{min-height:40px; padding:0 12px; font-size:.92rem}
+.btn.block{width:100%}
+.btn.danger{color:var(--danger)}
+.btn[disabled]{opacity:.55; cursor:default}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+.msg{border-radius:10px; padding:10px 12px; font-size:.95rem; background:var(--accent-soft)}
+.msg.err{background:var(--warn-soft)}
+.panel{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:16px; display:grid; gap:14px; min-width:0}
+.field{display:grid; gap:6px; min-width:0}
+label,.lbl{font-weight:700; font-size:.92rem}
+.hint{color:var(--muted); font-size:.86rem; line-height:1.7; margin:0}
+ol.steps{margin:0; padding-inline-start:22px; display:grid; gap:6px}
+input[type=text],input[type=password],select{
+  width:100%; min-height:44px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink);
+  padding:9px 12px; font:inherit; min-width:0;
+}
+input.ltr{direction:ltr; text-align:left; font-family:var(--f-mono); font-size:.85rem}
+select{direction:ltr; text-align:left}
+.row{display:flex; gap:10px; flex-wrap:wrap}
+.row > *{flex:1 1 auto}
+a{color:var(--accent)}
+.seg{display:flex; gap:4px; background:var(--surface-2); padding:4px; border-radius:12px}
+.seg button{
+  flex:1 1 0; min-height:44px; border:1px solid transparent; border-radius:9px; background:transparent; color:var(--muted);
+  font:inherit; cursor:pointer; min-width:0;
+}
+.seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink); border-color:var(--line); font-weight:700}
+.check{display:flex; gap:10px; align-items:flex-start; font-weight:400}
+.check input{width:22px; height:22px; margin:3px 0 0; accent-color:var(--accent); flex:none}
+.fileinfo{display:flex; align-items:center; justify-content:space-between; gap:10px; min-width:0}
+.fname{direction:ltr; text-align:left; font-family:var(--f-mono); font-size:.8rem; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0}
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+progress{width:100%; height:10px; accent-color:var(--accent)}
+video{width:100%; max-height:46vh; border-radius:10px; background:#000}
+.cues{display:grid; gap:8px; max-height:60vh; overflow:auto; padding:2px}
+.cue{display:grid; grid-template-columns:auto 1fr; gap:10px; align-items:start; text-align:start; width:100%;
+  border:1px solid var(--line); border-radius:10px; padding:8px 10px; background:var(--bg); color:var(--ink); font:inherit; cursor:pointer; min-width:0}
+.cue.noseek{cursor:default}
+.t{direction:ltr; font-family:var(--f-mono); font-size:.75rem; color:var(--muted); padding-top:5px; font-variant-numeric:tabular-nums}
+.tr{overflow-wrap:anywhere; font-weight:500}
+.or{overflow-wrap:anywhere; color:var(--muted); font-size:.88rem}
+.cue.on{border-color:var(--accent); background:var(--accent-soft)}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    <div>
+      <h1>زیرنویس‌یار</h1>
+      <p class="sub">از ویدیو یا صدا زیرنویس و ترجمه‌ی آلمانی یا فارسی بساز</p>
+    </div>
+    <button id="gear" class="btn small" type="button">تنظیمات</button>
+  </header>
+
+  <div id="msg" class="msg" role="status" aria-live="polite" hidden></div>
+
+  <section id="keyPanel" class="panel" hidden>
+    <h2>کلید Gemini</h2>
+    <p class="hint">اپ برای تبدیل صدا به متن و ترجمه از Gemini گوگل استفاده می‌کند. یک کلید رایگان لازم است:</p>
+    <ol class="steps">
+      <li>برو به <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/apikey</a> و با حساب گوگلت وارد شو.</li>
+      <li>دکمه‌ی ساخت کلید (Create API key) را بزن. اسم دکمه‌ها ممکن است کمی فرق کند.</li>
+      <li>کلید را کپی کن و همین‌جا بچسبان.</li>
+    </ol>
+    <div class="field">
+      <label for="key">کلید</label>
+      <input id="key" class="ltr" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="AIza...">
+    </div>
+    <div class="field" id="modelWrap" hidden>
+      <label for="model">مدل</label>
+      <select id="model"></select>
+      <p class="hint">مدل‌های lite سریع‌ترند و سهمیه‌ی روزانه‌ی بیشتری دارند. مدل‌های بدون lite معمولاً دقیق‌ترند ولی سهمیه‌ی رایگانشان کمتر است.</p>
+    </div>
+    <div class="row">
+      <button id="saveKey" class="btn primary" type="button">ذخیره و آزمایش کلید</button>
+      <button id="delKey" class="btn danger" type="button" hidden>حذف کلید</button>
+    </div>
+    <p class="hint">کلید فقط روی همین گوشی ذخیره می‌شود. آن را به کسی نده و جایی مثل GitHub نگذار. صدای فایل برای پردازش به سرور گوگل فرستاده می‌شود.</p>
+  </section>
+
+  <section class="panel" id="mainPanel">
+    <div class="field">
+      <span class="lbl">ویدیو یا فایل صوتی</span>
+      <label class="btn block" for="file">انتخاب فایل از گوشی</label>
+      <input id="file" class="sr" type="file" accept="video/*,audio/*,.mp4,.m4a,.mp3,.wav,.aac,.ogg,.flac,.webm,.mov,.mkv">
+      <div class="fileinfo" id="fileinfo" hidden><span class="fname" id="fname"></span><span class="hint" id="fsize"></span></div>
+    </div>
+    <div class="field">
+      <span class="lbl">زبان خروجی</span>
+      <div class="seg" id="target">
+        <button type="button" data-t="fa" aria-pressed="true">فارسی</button>
+        <button type="button" data-t="de" aria-pressed="false">آلمانی (Deutsch)</button>
+      </div>
+      <p class="hint">زبان گفتار را خودش تشخیص می‌دهد.</p>
+    </div>
+    <label class="check"><input id="both" type="checkbox"><span>متن اصلی هم زیر ترجمه در زیرنویس بیاید</span></label>
+    <button id="start" class="btn primary block" type="button">ساخت زیرنویس</button>
+    <div id="prog" hidden>
+      <progress id="bar" max="100" value="0"></progress>
+      <p class="hint" id="progTxt"></p>
+      <button id="cancel" class="btn small" type="button">توقف</button>
+    </div>
+  </section>
+
+  <section id="result" class="panel" hidden>
+    <h2 id="resTitle">نتیجه</h2>
+    <video id="vid" controls playsinline preload="metadata" hidden></video>
+    <div class="row">
+      <button id="dlSrt" class="btn small" type="button">ذخیره SRT</button>
+      <button id="dlVtt" class="btn small" type="button">ذخیره VTT</button>
+      <button id="cpTxt" class="btn small" type="button">کپی متن ترجمه</button>
+      <button id="cpSrt" class="btn small" type="button">کپی SRT</button>
+    </div>
+    <div id="cues" class="cues"></div>
+    <p class="hint">برای فایل‌های بلند، اپ صدا را هر ۵ دقیقه یک بار می‌فرستد. اگر اینترنت قطع شد یا سهمیه تمام شد، آنچه تا اینجا ساخته شده نگه داشته می‌شود.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var CH_SEC=Number(window.__ZY_CHUNK)||300;
+var RATE=16000;
+var API='https://generativelanguage.googleapis.com/v1beta/';
+var LS={key:'zy.key',model:'zy.model',target:'zy.target',both:'zy.both',last:'zy.last'};
+var LANGS={fa:{prompt:'Persian (Farsi), written in Persian script with correct half-spaces (نیم‌فاصله)',label:'فارسی'},
+           de:{prompt:'German',label:'آلمانی'}};
+var st={key:'',model:'',target:'fa',both:false,file:null,cues:[],busy:false,abort:null,wake:null,
+        objUrl:null,track:null,resLang:'fa',resName:'subtitle'};
+
+function $(s){return document.querySelector(s);}
+function fa(n){return Number(n).toLocaleString('fa-IR');}
+function lsGet(k,def){try{var v=localStorage.getItem(k);return v==null?def:JSON.parse(v);}catch(e){return def;}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+function lsDel(k){try{localStorage.removeItem(k);}catch(e){}}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+/* ---------- messages ---------- */
+var msgTimer=null;
+function msg(t,isErr,keep){
+  var el=$('#msg'); clearTimeout(msgTimer);
+  if(!t){el.hidden=true;return;}
+  el.textContent=t; el.className='msg'+(isErr?' err':''); el.hidden=false;
+  if(!keep)msgTimer=setTimeout(function(){el.hidden=true;},isErr?9000:5000);
+}
+
+/* ---------- time + subtitle formats ---------- */
+function parseTime(v){
+  if(typeof v==='number')return isFinite(v)?v:NaN;
+  if(typeof v!=='string')return NaN;
+  var s=v.trim().replace(',','.');
+  if(!s)return NaN;
+  var p=s.split(':');
+  if(p.length>3)return NaN;
+  var n=0;
+  for(var i=0;i<p.length;i++){
+    if(!/^\d+(\.\d+)?$/.test(p[i]))return NaN;
+    n=n*60+parseFloat(p[i]);
+  }
+  return n;
+}
+function pad(n,l){n=String(n);while(n.length<l)n='0'+n;return n;}
+function fmt(t,sep){
+  t=Math.max(0,t); var ms=Math.round(t*1000);
+  var h=Math.floor(ms/3600000); ms-=h*3600000;
+  var m=Math.floor(ms/60000); ms-=m*60000;
+  var s=Math.floor(ms/1000); ms-=s*1000;
+  return pad(h,2)+':'+pad(m,2)+':'+pad(s,2)+sep+pad(ms,3);
+}
+function short(t){var m=Math.floor(t/60), s=Math.floor(t%60); return pad(m,2)+':'+pad(s,2);}
+function cueText(c,lang,both){
+  var t=(c.t||'').trim();
+  if(lang==='fa')t='‏'+t;
+  var o=(c.o||'').trim();
+  if(both&&o&&o!==(c.t||'').trim())t+='\n'+o;
+  return t;
+}
+function buildSrt(cues,lang,both){
+  return cues.map(function(c,i){return (i+1)+'\n'+fmt(c.s,',')+' --> '+fmt(c.e,',')+'\n'+cueText(c,lang,both);}).join('\n\n')+'\n';
+}
+function buildVtt(cues,lang,both){
+  return 'WEBVTT\n\n'+cues.map(function(c){return fmt(c.s,'.')+' --> '+fmt(c.e,'.')+'\n'+cueText(c,lang,both);}).join('\n\n')+'\n';
+}
+function plainText(cues){return cues.map(function(c){return (c.t||'').trim();}).filter(Boolean).join('\n');}
+
+function normalize(raw,offset,dur){
+  var out=[];
+  if(!Array.isArray(raw))return out;
+  raw.forEach(function(r){
+    if(!r||typeof r!=='object')return;
+    var s=parseTime(r.start!=null?r.start:r.s), e=parseTime(r.end!=null?r.end:r.e);
+    var t=String(r.translation!=null?r.translation:(r.text!=null?r.text:'')).trim();
+    var o=String(r.original!=null?r.original:'').trim();
+    if(!isFinite(s)||!t)return;
+    if(s>dur+2)return;
+    if(!isFinite(e)||e<=s)e=s+3;
+    e=Math.min(e,dur+1);
+    if(e<=s)e=s+0.5;
+    out.push({s:s+offset,e:e+offset,t:t,o:o});
+  });
+  return out;
+}
+function fixOverlaps(list){
+  var a=list.slice().sort(function(x,y){return x.s-y.s;});
+  for(var i=0;i<a.length-1;i++){
+    if(a[i].e>a[i+1].s)a[i].e=a[i+1].s;
+    if(a[i].e-a[i].s<0.3)a[i].e=a[i].s+0.3;
+  }
+  return a;
+}
+
+/* ---------- audio ---------- */
+async function decodeTo16k(file){
+  var Ctx=window.AudioContext||window.webkitAudioContext;
+  if(!Ctx)throw new Error('noaudio');
+  var ctx; try{ctx=new Ctx({sampleRate:RATE});}catch(e){ctx=new Ctx();}
+  var buf=await file.arrayBuffer();
+  var ab;
+  try{
+    ab=await new Promise(function(res,rej){ctx.decodeAudioData(buf,res,rej);});
+  }catch(e){throw new Error('decode');}
+  finally{try{ctx.close();}catch(e){}}
+  buf=null;
+  if(ab.sampleRate===RATE){
+    var n=ab.length, ch=ab.numberOfChannels, out=new Float32Array(n);
+    for(var c=0;c<ch;c++){var d=ab.getChannelData(c); for(var i=0;i<n;i++)out[i]+=d[i]/ch;}
+    return out;
+  }
+  var off=new OfflineAudioContext(1,Math.max(1,Math.ceil(ab.duration*RATE)),RATE);
+  var src=off.createBufferSource(); src.buffer=ab; src.connect(off.destination); src.start();
+  var r=await off.startRendering();
+  return r.getChannelData(0).slice();
+}
+function peak(f){var m=0; for(var i=0;i<f.length;i+=8){var v=Math.abs(f[i]); if(v>m)m=v;} return m;}
+function wavBlob(f32){
+  var n=f32.length, buf=new ArrayBuffer(44+n*2), v=new DataView(buf);
+  function w(o,s){for(var i=0;i<s.length;i++)v.setUint8(o+i,s.charCodeAt(i));}
+  w(0,'RIFF'); v.setUint32(4,36+n*2,true); w(8,'WAVE'); w(12,'fmt ');
+  v.setUint32(16,16,true); v.setUint16(20,1,true); v.setUint16(22,1,true);
+  v.setUint32(24,RATE,true); v.setUint32(28,RATE*2,true); v.setUint16(32,2,true); v.setUint16(34,16,true);
+  w(36,'data'); v.setUint32(40,n*2,true);
+  var o=44;
+  for(var i=0;i<n;i++){var s=Math.max(-1,Math.min(1,f32[i])); v.setInt16(o,s<0?s*0x8000:s*0x7FFF,true); o+=2;}
+  return new Blob([buf],{type:'audio/wav'});
+}
+function toBase64(blob){
+  return new Promise(function(res,rej){
+    var fr=new FileReader();
+    fr.onload=function(){res(String(fr.result).split(',')[1]||'');};
+    fr.onerror=function(){rej(fr.error);};
+    fr.readAsDataURL(blob);
+  });
+}
+
+/* ---------- Gemini ---------- */
+function apiError(status,message){var e=new Error(message||('http '+status)); e.status=status; return e;}
+function sleep(ms,signal){
+  return new Promise(function(res,rej){
+    var t=setTimeout(res,ms);
+    if(signal)signal.addEventListener('abort',function(){clearTimeout(t); rej(new DOMException('aborted','AbortError'));},{once:true});
+  });
+}
+async function readErr(res){
+  var j=null; try{j=await res.json();}catch(e){}
+  return apiError(res.status,(j&&j.error&&j.error.message)||'');
+}
+function versionOf(n){var m=/gemini-(\d+(?:\.\d+)?)/.exec(n); return m?parseFloat(m[1]):0;}
+async function listModels(key){
+  var res=await fetch(API+'models?pageSize=200',{headers:{'x-goog-api-key':key}});
+  if(!res.ok)throw await readErr(res);
+  var j=await res.json();
+  var ms=(j.models||[]).filter(function(m){
+    return (m.supportedGenerationMethods||[]).indexOf('generateContent')>=0 &&
+      /gemini-.*flash/i.test(m.name) && !/(image|tts|live|audio|embed|robotics|computer|exp|vision|latest)/i.test(m.name);
+  }).map(function(m){return m.name;});
+  ms.sort(function(a,b){return versionOf(b)-versionOf(a)||a.localeCompare(b);});
+  return ms;
+}
+function pickDefault(models){
+  function ok(n,lite,prev){return (lite===/lite/i.test(n)) && (prev===/preview/i.test(n));}
+  var order=[[true,false],[true,true],[false,false],[false,true]];
+  for(var i=0;i<order.length;i++){
+    for(var k=0;k<models.length;k++){if(ok(models[k],order[i][0],order[i][1]))return models[k];}
+  }
+  return models[0]||'';
+}
+function buildPrompt(lang){
+  var L=LANGS[lang].prompt;
+  return 'You are a professional subtitle translator. Listen to this audio clip. Transcribe all speech in the language it is spoken in, '+
+  'and translate it into '+L+'.\n'+
+  'Return ONLY a JSON array of subtitle cues in time order. Each cue is an object with exactly these fields:\n'+
+  '"start": start time as "MM:SS" counted from the beginning of THIS clip,\n'+
+  '"end": end time as "MM:SS" from the beginning of THIS clip,\n'+
+  '"original": the transcription in the spoken language,\n'+
+  '"translation": a natural, fluent translation into '+L+', not word by word.\n'+
+  'Keep each cue short: one or two sentences, about 2 to 7 seconds. If the speech is already in the target language, '+
+  'copy the same text into both fields. Ignore music and silence. Never invent speech. If there is no speech, return [].';
+}
+function parseJsonLoose(text){
+  var t=String(text||'').trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/,'');
+  try{return JSON.parse(t);}catch(e){}
+  var a=t.indexOf('['), b=t.lastIndexOf(']');
+  if(a>=0&&b>a){try{return JSON.parse(t.slice(a,b+1));}catch(e){}}
+  throw new Error('badjson');
+}
+async function transcribeChunk(b64,lang,signal,onWait){
+  var body={contents:[{role:'user',parts:[{text:buildPrompt(lang)},{inline_data:{mime_type:'audio/wav',data:b64}}]}],
+            generationConfig:{responseMimeType:'application/json',temperature:0.2}};
+  var url=API+st.model+':generateContent';
+  var badJson=0;
+  for(var attempt=0;attempt<4;attempt++){
+    var res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':st.key},body:JSON.stringify(body),signal:signal});
+    if(!res.ok){
+      var err=await readErr(res);
+      if(res.status===429&&/per ?day|daily/i.test(err.message)){err.daily=true; throw err;}
+      if((res.status===429||res.status===500||res.status===503)&&attempt<3){
+        var wait=(attempt+1)*20;
+        for(var s=wait;s>0;s--){onWait(s,res.status); await sleep(1000,signal);}
+        continue;
+      }
+      throw err;
+    }
+    var j=await res.json();
+    var cand=j.candidates&&j.candidates[0];
+    var text=cand&&cand.content&&cand.content.parts?cand.content.parts.map(function(p){return p.text||'';}).join(''):'';
+    if(!text){
+      var br=j.promptFeedback&&j.promptFeedback.blockReason;
+      if(br)throw apiError(0,'blocked:'+br);
+      return [];
+    }
+    try{return parseJsonLoose(text);}
+    catch(e){ if(++badJson>=2)throw e; }
+  }
+  throw apiError(429,'retries');
+}
+function errText(e){
+  if(!e)return 'خطای نامشخص.';
+  if(e.name==='AbortError')return 'متوقف شد.';
+  if(e.message==='decode')return 'این فایل خوانده نشد. قالب mp4 یا mp3 را امتحان کن.';
+  if(e.message==='noaudio')return 'این مرورگر از پردازش صدا پشتیبانی نمی‌کند. Chrome را امتحان کن.';
+  if(e.message==='badjson')return 'پاسخ مدل خوانده نشد. دوباره امتحان کن یا مدل دیگری انتخاب کن.';
+  if(e.message==='toolarge')return 'فایل بزرگ است (بیشتر از ۴۰۰ مگابایت). یک تکه‌ی کوتاه‌تر انتخاب کن.';
+  if(e.daily)return 'سهمیه‌ی روزانه‌ی رایگان تمام شد. فردا دوباره امتحان کن یا در تنظیمات مدل lite را انتخاب کن.';
+  if(e.status===400||e.status===403||e.status===401){
+    if(/blocked:/.test(e.message))return 'گوگل این بخش را پردازش نکرد ('+e.message.replace('blocked:','')+').';
+    return 'کلید درست نیست یا اجازه‌ی استفاده ندارد. در تنظیمات دوباره بررسی کن.'+(e.message?' ('+e.message.slice(0,120)+')':'');
+  }
+  if(e.status===404)return 'این مدل پیدا نشد. در تنظیمات مدل دیگری انتخاب کن.';
+  if(e.status===429)return 'سقف درخواست‌ها پر شده است. چند دقیقه صبر کن و دوباره بزن.';
+  if(e.status>=500)return 'سرور گوگل در دسترس نیست. کمی بعد دوباره امتحان کن.';
+  if(e instanceof TypeError)return 'اتصال اینترنت برقرار نیست.';
+  return 'خطا: '+(e.message||e);
+}
+
+/* ---------- UI: settings ---------- */
+function fillModels(models){
+  var sel=$('#model'), cur=st.model;
+  if(!models||!models.length){models=cur?[cur]:[];}
+  if(cur&&models.indexOf(cur)<0)models=[cur].concat(models);
+  sel.innerHTML=models.map(function(m){return '<option value="'+esc(m)+'">'+esc(m.replace('models/',''))+'</option>';}).join('');
+  if(cur)sel.value=cur;
+  $('#modelWrap').hidden=!models.length;
+}
+function openKey(){$('#keyPanel').hidden=false; $('#delKey').hidden=!st.key; try{$('#keyPanel').scrollIntoView({block:'start'});}catch(e){}}
+async function saveKey(){
+  var k=$('#key').value.trim();
+  if(!k&&st.key){ // only model changed
+    st.model=$('#model').value; lsSet(LS.model,st.model); $('#keyPanel').hidden=true; msg('ذخیره شد.'); return;
+  }
+  if(!k){msg('کلید را بچسبان.',true);return;}
+  var b=$('#saveKey'); b.disabled=true; b.textContent='در حال آزمایش…';
+  try{
+    var models=await listModels(k);
+    if(!models.length)throw apiError(404,'no models');
+    st.key=k; lsSet(LS.key,k);
+    var chosen=$('#model').value;
+    st.model=(chosen&&models.indexOf(chosen)>=0)?chosen:(models.indexOf(st.model)>=0?st.model:pickDefault(models));
+    lsSet(LS.model,st.model);
+    fillModels(models); $('#model').value=st.model;
+    $('#key').value=''; $('#keyPanel').hidden=true;
+    msg('کلید درست است و ذخیره شد.');
+  }catch(e){msg(errText(e),true);}
+  finally{b.disabled=false; b.textContent='ذخیره و آزمایش کلید';}
+}
+function delKey(){
+  st.key=''; st.model=''; lsDel(LS.key); lsDel(LS.model);
+  $('#key').value=''; fillModels([]); $('#delKey').hidden=true;
+  msg('کلید حذف شد.');
+}
+
+/* ---------- UI: file + result ---------- */
+function humanSize(n){return n>=1048576?fa((n/1048576).toFixed(1))+' مگابایت':fa(Math.max(1,Math.round(n/1024)))+' کیلوبایت';}
+function onFile(f){
+  if(!f)return;
+  st.file=f;
+  $('#fname').textContent=f.name; $('#fsize').textContent=humanSize(f.size); $('#fileinfo').hidden=false;
+  if(st.objUrl)URL.revokeObjectURL(st.objUrl);
+  st.objUrl=URL.createObjectURL(f);
+  var v=$('#vid'); v.src=st.objUrl; v.hidden=false;
+  st.cues=[]; st.resName=f.name.replace(/\.[^.]+$/,'')||'subtitle';
+  renderCues(); $('#result').hidden=false; $('#resTitle').textContent='پیش‌نمایش';
+}
+function syncTrack(){
+  var v=$('#vid'); if(v.hidden)return;
+  if(!st.track){
+    try{st.track=v.addTextTrack('subtitles','زیرنویس',st.resLang); st.track.mode='showing';}catch(e){st.track=null;return;}
+  }
+  try{
+    var old=st.track.cues; if(old){for(var i=old.length-1;i>=0;i--)st.track.removeCue(old[i]);}
+    st.cues.forEach(function(c){st.track.addCue(new VTTCue(c.s,c.e,cueText(c,st.resLang,st.both)));});
+  }catch(e){}
+}
+function renderCues(){
+  var box=$('#cues'), hasVid=!$('#vid').hidden;
+  var has=st.cues.length>0;
+  ['#dlSrt','#dlVtt','#cpTxt','#cpSrt'].forEach(function(s){$(s).hidden=!has;});
+  box.hidden=!has;
+  box.innerHTML=st.cues.map(function(c,i){
+    return '<button type="button" class="cue'+(hasVid?'':' noseek')+'" data-i="'+i+'"><span class="t">'+short(c.s)+'</span><span><div class="tr" dir="auto">'+esc(c.t)+
+      '</div>'+(c.o&&c.o!==c.t?'<div class="or" dir="auto">'+esc(c.o)+'</div>':'')+'</span></button>';
+  }).join('');
+  if(has)$('#resTitle').textContent='نتیجه ('+fa(st.cues.length)+' خط)';
+  syncTrack();
+}
+function setProg(p,t){var b=$('#bar'); b.value=p; $('#progTxt').textContent=t;}
+
+/* ---------- main run ---------- */
+async function acquireWake(){try{if(navigator.wakeLock)st.wake=await navigator.wakeLock.request('screen');}catch(e){st.wake=null;}}
+function releaseWake(){try{if(st.wake)st.wake.release();}catch(e){} st.wake=null;}
+async function run(){
+  if(st.busy)return;
+  if(!st.key){msg('اول کلید Gemini را در تنظیمات وارد کن.',true); openKey(); return;}
+  if(!st.file){msg('اول یک ویدیو یا فایل صوتی انتخاب کن.',true);return;}
+  if(st.file.size>400*1024*1024){msg(errText(new Error('toolarge')),true);return;}
+  st.busy=true; st.abort=new AbortController(); var signal=st.abort.signal;
+  st.cues=[]; st.resLang=st.target; renderCues();
+  $('#start').disabled=true; $('#prog').hidden=false; $('#result').hidden=false; $('#resTitle').textContent='در حال ساخت…';
+  var ok=false;
+  try{
+    await acquireWake();
+    if(!st.model){var ms=await listModels(st.key); st.model=pickDefault(ms); lsSet(LS.model,st.model); fillModels(ms);}
+    setProg(2,'در حال خواندن صدای فایل…');
+    var pcm=await decodeTo16k(st.file);
+    var per=CH_SEC*RATE, total=Math.max(1,Math.ceil(pcm.length/per)), all=[], failed=0;
+    for(var i=0;i<total;i++){
+      if(signal.aborted)throw new DOMException('aborted','AbortError');
+      var seg=pcm.subarray(i*per,Math.min(pcm.length,(i+1)*per)), dur=seg.length/RATE;
+      setProg(5+90*i/total,'بخش '+fa(i+1)+' از '+fa(total)+' در حال پردازش…');
+      if(dur<0.5||peak(seg)<0.003)continue;
+      var b64=await toBase64(wavBlob(seg));
+      var raw=await transcribeChunk(b64,st.target,signal,function(s,code){
+        setProg(5+90*i/total,'گوگل مشغول است ('+fa(code)+'). '+fa(s)+' ثانیه صبر می‌کنم و دوباره می‌فرستم…');
+      });
+      all=all.concat(normalize(raw,i*CH_SEC,dur));
+      st.cues=fixOverlaps(all); renderCues();
+    }
+    setProg(100,'تمام شد.');
+    ok=true;
+    if(!st.cues.length)msg('گفتاری در فایل پیدا نشد.',true);
+    else msg('زیرنویس آماده شد: '+fa(st.cues.length)+' خط.');
+  }catch(e){
+    if(e&&e.name==='AbortError')msg('متوقف شد.',true); else msg(errText(e),true);
+  }finally{
+    releaseWake(); st.busy=false; st.abort=null; $('#start').disabled=false;
+    setTimeout(function(){if(!st.busy)$('#prog').hidden=true;},ok?1200:300);
+    if(st.cues.length){
+      st.resName=(st.file&&st.file.name?st.file.name.replace(/\.[^.]+$/,''):'subtitle');
+      lsSet(LS.last,{name:st.resName,lang:st.resLang,cues:st.cues});
+      renderCues();
+    }
+  }
+}
+
+/* ---------- export ---------- */
+function download(name,text,type){
+  var b=new Blob([text],{type:type+';charset=utf-8'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function(){URL.revokeObjectURL(a.href);},10000);
+}
+async function copy(text,okMsg){
+  try{await navigator.clipboard.writeText(text); msg(okMsg); return;}catch(e){}
+  try{
+    var ta=document.createElement('textarea'); ta.value=text; ta.style.cssText='position:fixed;opacity:0;top:0';
+    document.body.appendChild(ta); ta.select(); var r=document.execCommand('copy'); ta.remove();
+    msg(r?okMsg:'کپی نشد. از ذخیره‌ی فایل استفاده کن.',!r);
+  }catch(e){msg('کپی نشد. از ذخیره‌ی فایل استفاده کن.',true);}
+}
+
+/* ---------- wiring ---------- */
+function setTarget(t){
+  st.target=t; lsSet(LS.target,t);
+  document.querySelectorAll('#target button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.t===t));});
+}
+function wire(){
+  $('#gear').addEventListener('click',function(){var p=$('#keyPanel'); if(p.hidden)openKey(); else p.hidden=true;});
+  $('#saveKey').addEventListener('click',saveKey);
+  $('#delKey').addEventListener('click',delKey);
+  $('#model').addEventListener('change',function(){st.model=this.value; lsSet(LS.model,st.model);});
+  $('#file').addEventListener('change',function(){var f=this.files&&this.files[0]; onFile(f);});
+  $('#target').addEventListener('click',function(ev){var b=ev.target.closest('[data-t]'); if(b&&!st.busy)setTarget(b.dataset.t);});
+  $('#both').addEventListener('change',function(){st.both=this.checked; lsSet(LS.both,st.both); syncTrack();});
+  $('#start').addEventListener('click',run);
+  $('#cancel').addEventListener('click',function(){if(st.abort)st.abort.abort();});
+  $('#dlSrt').addEventListener('click',function(){download(st.resName+'.'+st.resLang+'.srt',buildSrt(st.cues,st.resLang,st.both),'application/x-subrip');});
+  $('#dlVtt').addEventListener('click',function(){download(st.resName+'.'+st.resLang+'.vtt',buildVtt(st.cues,st.resLang,st.both),'text/vtt');});
+  $('#cpTxt').addEventListener('click',function(){copy(plainText(st.cues),'متن ترجمه کپی شد.');});
+  $('#cpSrt').addEventListener('click',function(){copy(buildSrt(st.cues,st.resLang,st.both),'SRT کپی شد.');});
+  $('#cues').addEventListener('click',function(ev){
+    var b=ev.target.closest('[data-i]'), v=$('#vid'); if(!b||v.hidden)return;
+    var c=st.cues[Number(b.dataset.i)]; if(!c)return;
+    try{v.currentTime=c.s; v.play();}catch(e){}
+  });
+  $('#vid').addEventListener('timeupdate',function(){
+    var t=this.currentTime, idx=-1;
+    for(var i=0;i<st.cues.length;i++){if(t>=st.cues[i].s&&t<st.cues[i].e){idx=i;break;}}
+    var prev=document.querySelector('.cue.on'); if(prev&&Number(prev.dataset.i)!==idx)prev.classList.remove('on');
+    if(idx>=0){var el=document.querySelector('.cue[data-i="'+idx+'"]'); if(el&&!el.classList.contains('on'))el.classList.add('on');}
+  });
+}
+async function init(){
+  wire();
+  st.key=lsGet(LS.key,''); st.model=lsGet(LS.model,''); st.both=!!lsGet(LS.both,false);
+  $('#both').checked=st.both;
+  setTarget(lsGet(LS.target,'fa')==='de'?'de':'fa');
+  fillModels([]);
+  if(!st.key){openKey();}
+  else{listModels(st.key).then(function(ms){if(!st.model)st.model=pickDefault(ms); lsSet(LS.model,st.model); fillModels(ms);}).catch(function(){});}
+  var last=lsGet(LS.last,null);
+  if(last&&Array.isArray(last.cues)&&last.cues.length){
+    st.cues=last.cues; st.resLang=last.lang==='de'?'de':'fa'; st.resName=last.name||'subtitle';
+    $('#result').hidden=false; $('#resTitle').textContent='آخرین نتیجه'; renderCues();
+  }
+  if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){});}
+}
+init();
+})();
+</script>
+</body>
+</html>
